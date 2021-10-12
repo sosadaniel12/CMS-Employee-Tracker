@@ -20,6 +20,7 @@
   "homepage": "https://github.com/sosadaniel12/CMS-Employee-Tracker#readme",
   "dependencies": {
     "inquirer": "^8.2.0",
+    "mysql2": "^2.3.0",
     "node": "^16.10.0"
   }
 }
