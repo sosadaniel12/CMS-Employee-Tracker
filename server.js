@@ -2,6 +2,7 @@
 const mysql = require("mysql2");
 const inquirer = require("inquirer");
 
+//Ask the question for the user
 
 
 //connect to the database
