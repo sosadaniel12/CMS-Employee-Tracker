@@ -1,24 +1,25 @@
-DROP DATABASE IF EXISTS employeeTracker_db;
-CREATE DATABASE employeeTracker_db;
+create database employer_trackerDB;
+use employer_trackerDB; 
 
-USE employeeTracker_db;
-
-CREATE TABLE department(
-id INT NOT NULL,
-name VARCHAR(30) NOT NULL
+create table employee (
+id integer not null auto_increment,
+first_name varchar(30),
+last_name varchar(30),
+role_id integer,
+manager_id integer,
+primary key (id)
 );
 
-CREATE TABLE role (
-id INT PRIMARY KEY NOT NULL,
-title VARCHAR(30) NOT NULL,
-salary DECIMAL NOT NULL,
-department_id INT NOT NULL
+create table department (
+id integer not null auto_increment,
+department_name varchar(30),
+primary key (id)
 );
 
-CREATE TABLE employee (
-id INT PRIMARY KEY NOT NULL,
-first_name VARCHAR(30) NOT NULL,
-last_name VARCHAR(30) NOT NULL,
-role_id INT NOT NULL,
-manager_id INT
+create table role (
+id integer not null auto_increment,
+title varchar(30),
+salary decimal (8,2),
+department_id integer,
+primary key (id)
 );
