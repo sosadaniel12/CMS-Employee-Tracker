@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/sosadaniel12/CMS-Employee-Tracker#readme",
   "dependencies": {
+    "console.table": "^0.10.0",
     "inquirer": "^8.2.0",
+    "mysql": "^2.18.1",
     "mysql2": "^2.3.0",
     "node": "^16.10.0"
   }
