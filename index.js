@@ -21,10 +21,10 @@ connection.connect(function (err) {
   if (err) throw err;
   console.log("connected as id " + connection.threadId);
 
-  startScreen();
+  appStart();
 });
 
-function startScreen() {
+function appStart() {
   inquirer
     .prompt({
       type: "list",
@@ -86,7 +86,7 @@ function addDepartment() {
         function (err, res) {
           if (err) throw err;
           console.table(res);
-          startScreen();
+          appStart();
         }
       );
     });
@@ -118,7 +118,7 @@ function addRole() {
         function (err, res) {
           if (err) throw err;
           console.table(res);
-          startScreen();
+          appStart();
         }
       );
     });
@@ -160,7 +160,7 @@ function addEmployee() {
         function (err, res) {
           if (err) throw err;
           console.table(res);
-          startScreen();
+          appStart();
         }
       );
     });
@@ -188,7 +188,7 @@ function updateEmployee() {
         function (err, res) {
           if (err) throw err;
           console.table(res);
-          startScreen();
+          appStart();
         }
       );
     });
@@ -199,7 +199,7 @@ function viewDepartment() {
   connection.query(query, function (err, res) {
     if (err) throw err;
     console.table(res);
-    startScreen();
+    appStart();
   });
 }
 
@@ -208,7 +208,7 @@ function viewRoles() {
   connection.query(query, function (err, res) {
     if (err) throw err;
     console.table(res);
-    startScreen();
+    appStart();
   });
 }
 
@@ -217,7 +217,7 @@ function viewEmployees() {
   connection.query(query, function (err, res) {
     if (err) throw err;
     console.table(res);
-    startScreen();
+    appStart();
   });
 }
 
